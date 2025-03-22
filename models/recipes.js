@@ -1,28 +1,46 @@
 const mongoose = require('mongoose');
 
 const recipeSchema = new mongoose.Schema({
-    name: {
-         type: String, 
-         required: true 
-
+    id: {
+        type: Number,
+        required: true,
+        unique: true
     },
-
-    ingredients: { 
-        type: [String], 
+    title: {
+        type: String,
         required: true
     },
-    steps: { 
-        type: [String], 
-        required: true
-    },
-    image: { 
-        type: [String], 
+    image: {
+        type: String,
         required: false
     },
-    origin: { 
-        type: String, enum: ['Algérie', 'Tunisie', 'Maroc'],
-         required: true 
+    preptime: {
+        type: Number,
+        required: true
+    },
+    ingredients: [{
+        name: {
+            type: String,
+            required: true
+        },
+        quantity: {
+            type: Number,
+            required: true
         }
+    }],
+    origins: {
+        type: String,
+        enum: ['Algérie', 'Tunisie', 'Maroc'],
+        required: true
+    },
+    servings: {
+        type: Number,
+        required: true
+    },
+    description: {
+        type: String,
+        required: true
+    }
 }, 
 { timestamps: true });
 
