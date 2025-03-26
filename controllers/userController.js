@@ -4,11 +4,13 @@ const jwt = require('jsonwebtoken');
 
 // Fonction pour générer un token simple (sans JWT)
 const generateToken = (id) => {
-    return jwt.sign({ id },process.env.JWT_SECRET, {
-        expiresIn: '40d' // Token valide pendant 40 jours 
+    if (!process.env.JWT_SECRET) {
+        throw new Error("JWT_SECRET is not defined in .env file");
+    }
+    return jwt.sign({ id }, process.env.JWT_SECRET, {
+        expiresIn: '40d'
     });
 };
-
 // Enregistrer un nouvel utilisateur
 const registerUser = async (req, res) => {
     try {

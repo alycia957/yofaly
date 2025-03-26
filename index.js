@@ -1,3 +1,5 @@
+//pour le fichier.env
+require('dotenv').config();
 //importe le paquet express
 const express = require('express')
 const mongoose = require('mongoose');
