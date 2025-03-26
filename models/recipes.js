@@ -3,8 +3,11 @@ const mongoose = require('mongoose');
 const recipeSchema = new mongoose.Schema({
     id: {
         type: Number,
-        required: true,
-        unique: true
+        unique: true,
+        default: function(){
+            //generer autaumatiquement un ID unique 
+            return Date.now();
+        }
     },
     title: {
         type: String,
@@ -29,7 +32,7 @@ const recipeSchema = new mongoose.Schema({
         }
     }],
     origins: {
-        type: String,
+        type: [String],
         enum: ['Algérie', 'Tunisie', 'Maroc'],
         required: true
     },

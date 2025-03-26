@@ -1,11 +1,16 @@
 //importe le paquet express
 const express = require('express')
 const mongoose = require('mongoose');
+//
+const helmet =require('helmet');
+const cors =require('cors');
 //crer une appli express 
 const app = express()
-const recipeRoutes = require('./routes/recipeRoutes');
-const { errorHandler } = require('./middleware/errorHandler');
+const recipeRoutes = require('./routes/recipeRoutes.js');
+const { errorHandler } = require('./middleware/errorHandler.js');
 const recipes =require('./models/recipes.js');
+const db = require('./config/db.js');
+const userRoutes = require('./routes/userRoutes');
 
 
 // Middleware
@@ -17,7 +22,7 @@ app.use(express.json());
 
 //http method (get,post,put,delete) ,ecouter la methode get 
 app.get('/',(req,res) =>{
-    res.send("hello from node API ")
+    res.send("Welcome to Maghrebi Recipes API")
 
 });
 
