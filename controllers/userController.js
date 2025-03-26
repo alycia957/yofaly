@@ -96,7 +96,7 @@ const loginUser = async (req, res) => {
             });
         }
 
-        // Générer un token simple
+        // Générer un token 
         const token = generateToken(user._id);
 
         res.json({

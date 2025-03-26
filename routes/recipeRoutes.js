@@ -7,13 +7,13 @@ router.get('/search', recipeController.searchRecipes);
 
 // Route pour filtrer par origine
 router.get('/origin/:origin', recipeController.getRecipesByOrigin);
-
+const { protect } = require('../middleware/AuthentificationHandler.js');
 // Routes CRUD principales
-router.get('/', recipeController.getAllRecipes);
-router.get('/:id', recipeController.getRecipeById);
-router.post('/', recipeController.createRecipe);
-router.put('/:id', recipeController.updateRecipe);
-router.delete('/:id', recipeController.deleteRecipe);
-router.get('/origin/:origin', recipeController.getRecipesByOrigin);
+router.get('/', protect, recipeController.getAllRecipes);
+router.get('/:id', protect, recipeController.getRecipeById);
+router.post('/', protect,  recipeController.createRecipe);
+router.put('/:id', protect, recipeController.updateRecipe);
+router.delete('/:id', protect, recipeController.deleteRecipe);
+router.get('/origin/:origin', protect, recipeController.getRecipesByOrigin);
 
 module.exports = router;
