@@ -19,7 +19,7 @@ app.use(helmet()); //Sécurise les headers HTTP
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-
+ 
 
 //http method (get,post,put,delete) ,ecouter la methode get 
 app.get('/',(req,res) =>{
@@ -29,7 +29,8 @@ app.get('/',(req,res) =>{
 
 // Routes pour les recettes
 app.use('/api/recipes', recipeRoutes);
-
+// Routes pour les utilisateurs
+app.use('/api/users', userRoutes);
 // Middleware de gestion d'erreur
 app.use(errorHandler);
 
