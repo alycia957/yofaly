@@ -1,5 +1,6 @@
 const User = require('../models/user.js');
 const bcrypt = require('bcryptjs');
+const jwt = require('jsonwebtoken');
 
 // Fonction pour générer un token simple (sans JWT)
 const generateToken = (id) => {
@@ -113,8 +114,7 @@ const loginUser = async (req, res) => {
 // Obtenir le profil de l'utilisateur
 const getUserProfile = async (req, res) => {
     try {
-        // Utilisez req.user au lieu de req.params.id
-        const user = await User.findById(req.user._id).select('-password');
+        const user = await User.findById(req.params.id).select('-password');
         
         if (!user) {
             return res.status(404).json({ 
@@ -186,9 +186,8 @@ const updateUserProfile = async (req, res) => {
     }
 };
 
-module.exports = {
-    registerUser,
-    loginUser,
-    getUserProfile,
-    updateUserProfile
-};
+
+exports.registerUser = registerUser;
+exports.loginUser = loginUser;
+exports.getUserProfile = getUserProfile;
+exports.updateUserProfile = updateUserProfile;
