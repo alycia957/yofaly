@@ -104,15 +104,18 @@ exports.deleteRecipe = async (req, res) => {
 // Filtrer les recettes par origine
 exports.getRecipesByOrigin = async (req, res) => {
   try {
-    console.log('Origine recherchée :', req.params.origin);
-    const recipes = await Recipe.find({ origins: req.params.origin });
+    const origin = req.params.origin;
+    console.log('Origine recherchée :', origin);
+    
+    // Utilisez $in pour rechercher dans le tableau origins
+    const recipes = await Recipe.find({ origins: { $in: [origin] } });
     
     console.log('Recettes trouvées :', recipes);
     
     if (recipes.length === 0) {
       return res.status(404).json({ 
         message: 'Aucune recette trouvée',
-        origine: req.params.origin 
+        origine: origin 
       });
     }
     

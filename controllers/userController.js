@@ -2,9 +2,10 @@ const User = require('../models/user.js');
 const bcrypt = require('bcryptjs');
 
 // Fonction pour générer un token simple (sans JWT)
-const generateSimpleToken = () => {
-    return Math.random().toString(36).substring(2, 15) + 
-           Math.random().toString(36).substring(2, 15);
+const generateToken = (id) => {
+    return jwt.sign({ id },process.env.JWT_SECRET, {
+        expiresIn: '40d' // Token valide pendant 40 jours 
+    });
 };
 
 // Enregistrer un nouvel utilisateur
@@ -46,7 +47,7 @@ const registerUser = async (req, res) => {
         });
 
         // Générer un token simple
-        const token = generateSimpleToken();
+        const token = generateToken(user._id);
 
         res.status(201).json({
             _id: user._id,
@@ -93,7 +94,7 @@ const loginUser = async (req, res) => {
         }
 
         // Générer un token simple
-        const token = generateSimpleToken();
+        const token = generateToken(user._id);
 
         res.json({
             _id: user._id,
@@ -112,8 +113,8 @@ const loginUser = async (req, res) => {
 // Obtenir le profil de l'utilisateur
 const getUserProfile = async (req, res) => {
     try {
-        // Pour l'instant, sans middleware d'authentification
-        const user = await User.findById(req.params.id).select('-password');
+        // Utilisez req.user au lieu de req.params.id
+        const user = await User.findById(req.user._id).select('-password');
         
         if (!user) {
             return res.status(404).json({ 

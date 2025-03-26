@@ -26,7 +26,7 @@ const recipes = [
         { name: 'Cumin', quantity: 5 },
         { name: 'Paprika', quantity: 5 }
       ],
-      origins: 'Algérie',
+      origins: ['Algérie'],
       servings: 6,
       description: 'Le couscous algérien traditionnel est préparé avec de la semoule de blé dur, des légumes de saison et de la viande d\'agneau. La semoule est cuite à la vapeur dans un couscoussier, tandis que les légumes mijotent dans un bouillon épicé avec la viande pour créer un plat savoureux et nourrissant.'
     },
@@ -49,7 +49,7 @@ const recipes = [
         { name: 'Paprika', quantity: 5 },
         { name: 'Cumin', quantity: 5 }
       ],
-      origins: 'Algérie',
+      origins: ['Algérie'],
       servings: 4,
       description: 'Le Berkoukes est un plat traditionnel algérien à base de grosses pâtes en forme de grains et d\'un ragoût de légumes et de viande. Les pâtes sont cuites dans le bouillon pour absorber toutes les saveurs des épices et des légumes.'
     },
@@ -68,7 +68,7 @@ const recipes = [
         { name: 'Beurre', quantity: 30 },
         { name: 'Sel', quantity: 5 }
       ],
-      origins: 'Algérie',
+      origins: ['Algérie'],
       servings: 4,
       description: 'L\'ham Lahlou est un plat sucré-salé traditionnel algérien, composé de viande d\'agneau cuite avec des fruits secs et des épices douces. Ce mélange de sucré et de salé est particulièrement apprécié pendant le Ramadan.'
     },
@@ -88,7 +88,7 @@ const recipes = [
         { name: 'Cumin', quantity: 5 },
         { name: 'Coriandre fraîche', quantity: 20 }
       ],
-      origins: 'Algérie',
+      origins: ['Algérie'],
       servings: 4,
       description: 'Le Mtewem est un plat algérien à base de poulet mijoté dans une sauce à l\'ail. Le poulet est d\'abord doré puis cuit lentement avec des épices, de l\'ail écrasé et des olives pour créer un plat savoureux et parfumé.'
     },
@@ -109,7 +109,7 @@ const recipes = [
         { name: 'Cumin', quantity: 5 },
         { name: 'Coriandre fraîche', quantity: 20 }
       ],
-      origins: 'Algérie',
+      origins: ['Algérie'],
       servings: 4,
       description: 'Le Tajine Zitoun est un plat algérien composé de viande mijotée avec des olives et du citron confit. La cuisson lente permet aux saveurs de se mélanger parfaitement, créant un plat riche et savoureux.'
     },
@@ -130,7 +130,7 @@ const recipes = [
         { name: 'Sel', quantity: 10 },
         { name: 'Poivre', quantity: 5 }
       ],
-      origins: 'Algérie',
+      origins: ['Algérie'],
       servings: 6,
       description: 'La Rechta est un plat festif algérien composé de fines pâtes artisanales servies avec une sauce blanche au poulet et aux légumes. Ce plat est traditionnellement préparé pour les célébrations et événements spéciaux.'
     },
@@ -148,7 +148,7 @@ const recipes = [
         { name: 'Eau', quantity: 500 },
         { name: 'Amandes effilées', quantity: 100 }
       ],
-      origins: 'Algérie',
+      origins: ['Algérie'],
       servings: 8,
       description: 'Kalb El Louz (cœur d\'amande) est un dessert algérien à base de semoule et d\'amandes, imbibé d\'un sirop parfumé à l\'eau de fleur d\'oranger. Ce gâteau moelleux et fondant est souvent servi pendant le Ramadan.'
     },
@@ -165,7 +165,7 @@ const recipes = [
         { name: 'Cannelle en poudre', quantity: 5 },
         { name: 'Pistaches concassées', quantity: 50 }
       ],
-      origins: 'Algérie',
+      origins: ['Algérie'],
       servings: 6,
       description: 'Le Mhalbi est un dessert crémeux algérien à base de lait et de maïzena, parfumé à l\'eau de fleur d\'oranger et saupoudré de cannelle. Sa texture douce et son goût léger en font un dessert rafraîchissant parfait après un repas.'
     },
@@ -183,7 +183,7 @@ const recipes = [
         { name: 'Miel', quantity: 300 },
         { name: 'Huile pour friture', quantity: 500 }
       ],
-      origins: 'Algérie',
+      origins:['Algérie'] ,
       servings: 30,
       description: 'Le Makrout aux amandes est un gâteau traditionnel algérien à base de semoule et farci d\'une pâte d\'amandes sucrée. Ces petits losanges sont frits puis trempés dans du miel parfumé, créant un délicieux contraste de textures.'
     },
@@ -201,7 +201,7 @@ const recipes = [
         { name: 'Miel', quantity: 300 },
         { name: 'Pistaches concassées', quantity: 100 }
       ],
-      origins: 'Algérie',
+      origins: ['Algérie'],
       servings: 24,
       description: 'La Baklawa algérienne est un dessert feuilleté à base de pâte filo et d\'amandes, imbibé de sirop parfumé. Ces petites pâtisseries en forme de losanges sont riches et sucrées, idéales pour accompagner un thé à la menthe.'
     },
@@ -217,7 +217,7 @@ const recipes = [
         { name: 'Cannelle en poudre', quantity: 10 },
         { name: 'Amandes effilées', quantity: 50 }
       ],
-      origins: 'Algérie',
+      origins: ['Algérie'],
       servings: 6,
       description: 'La Tamina est un dessert algérien simple à base de semoule grillée mélangée avec du beurre et du miel. Parfumée à la cannelle et décorée d\'amandes, cette pâte sucrée est traditionnellement servie lors des célébrations familiales.'
     },
@@ -234,7 +234,7 @@ const recipes = [
         { name: 'Pâte d\'amande', quantity: 200 },
         { name: 'Colorant alimentaire rouge', quantity: 2 }
       ],
-      origins: 'Algérie',
+      origins: ['Algérie'],
       servings: 20,
       description: 'Les Dziriyettes sont des petits gâteaux algériens à base d\'amandes, reconnaissables à leur belle couleur rose. Ces douceurs fondantes sont parfumées à l\'eau de fleur d\'oranger et enrobées de pâte d\'amande colorée.'
     },
@@ -260,7 +260,7 @@ const recipes = [
         { name: 'Sucre glace', quantity: 50 },
         { name: 'Huile d\'olive', quantity: 50 }
       ],
-      origins: 'Maroc',
+      origins: ['Maroc'],
       servings: 8,
       description: 'La pastilla au poulet est un plat marocain festif, mêlant le sucré et le salé. Cette tourte feuilletée contient du poulet émincé, des œufs, des amandes et des épices, le tout saupoudré de sucre glace et de cannelle.'
     },
@@ -283,7 +283,7 @@ const recipes = [
         { name: 'Sel', quantity: 10 },
         { name: 'Poivre', quantity: 5 }
       ],
-      origins: 'Maroc',
+      origins: ['Maroc'],
       servings: 4,
       description: 'Le tajine de poulet marocain est un plat mijoté lentement dans un plat en terre cuite traditionnel. Le poulet est tendre et parfumé par les épices, les olives et le citron confit, créant un mélange savoureux de saveurs.'
     },
@@ -307,7 +307,7 @@ const recipes = [
         { name: 'Sel', quantity: 10 },
         { name: 'Poivre', quantity: 5 }
       ],
-      origins: 'Maroc',
+      origins: ['Maroc'],
       servings: 4,
       description: 'Ce tajine marocain combine la tendreté de la viande de bœuf avec des pommes de terre fondantes, le tout mijoté dans une sauce richement épicée. Ce plat réconfortant est parfait pour un repas familial.'
     },
@@ -332,7 +332,7 @@ const recipes = [
         { name: 'Sel', quantity: 10 },
         { name: 'Poivre', quantity: 5 }
       ],
-      origins: 'Maroc',
+      origins: ['Maroc'],
       servings: 6,
       description: 'Le couscous marocain est célèbre pour sa semoule fine et légère accompagnée d\'un riche ragoût de viande et de légumes. Les légumes variés et les épices comme le ras el hanout donnent à ce plat sa saveur distinctive et authentique.'
     },
@@ -350,7 +350,7 @@ const recipes = [
         { name: 'Cannelle', quantity: 5 },
         { name: 'Œuf', quantity: 50 }
       ],
-      origins: 'Maroc',
+      origins: ['Maroc'],
       servings: 24,
       description: 'Kaab El Ghzal, aussi appelé "cornes de gazelle", est un célèbre gâteau marocain en forme de croissant fourré d\'une délicieuse pâte d\'amandes parfumée. La pâtisserie est légèrement dorée puis saupoudrée de sucre glace.'
     },
@@ -369,7 +369,7 @@ const recipes = [
         { name: 'Eau de fleur d\'oranger', quantity: 10 },
         { name: 'Graines d\'anis', quantity: 10 }
       ],
-      origins: 'Maroc',
+      origins: ['Maroc'],
       servings: 40,
       description: 'Les Fekkas sont des biscuits marocains croquants similaires aux biscottis italiens. Préparés avec des amandes entières et parfois des raisins secs, ils sont cuits deux fois pour obtenir ce croquant caractéristique, parfait pour accompagner le thé.'
     },
@@ -389,7 +389,7 @@ const recipes = [
         { name: 'Eau de fleur d\'oranger', quantity: 30 },
         { name: 'Huile pour friture', quantity: 500 }
       ],
-      origins: 'Maroc',
+      origins: ['Maroc'],
       servings: 30,
       description: 'La Chebakia est une pâtisserie marocaine traditionnelle, en forme de fleur, frite et trempée dans du miel parfumé à l\'eau de fleur d\'oranger. Ces gâteaux sont particulièrement populaires pendant le Ramadan.'
     },
@@ -408,7 +408,7 @@ const recipes = [
         { name: 'Œuf', quantity: 50 },
         { name: 'Amandes entières', quantity: 30 }
       ],
-      origins: 'Maroc',
+      origins: ['Maroc'],
       servings: 20,
       description: 'Les Ghraibia sont des biscuits sablés marocains, légers et fondants en bouche. Cette variante à la semoule et noix de coco offre une texture particulièrement friable et un goût délicat, parfait pour accompagner un thé à la menthe.'
     },
@@ -436,7 +436,7 @@ const recipes = [
         { name: 'Sel', quantity: 10 },
         { name: 'Poivre', quantity: 5 }
       ],
-      origins: 'Tunisie',
+      origins: ['Tunisie'],
       servings: 6,
       description: 'Le couscous au poisson est une spécialité tunisienne provenant des régions côtières. La semoule est servie avec un bouillon épicé à la harissa, des légumes et du poisson frais. Ce plat léger et parfumé est particulièrement apprécié en été.'
     },
@@ -458,7 +458,7 @@ const recipes = [
         { name: 'Sel', quantity: 10 },
         { name: 'Poivre', quantity: 5 }
       ],
-      origins: 'Tunisie',
+      origins: ['Tunisie'],
       servings: 6,
       description: 'La Mloukhiya est un plat traditionnel tunisien à base de feuilles de corète séchées et réduites en poudre, mijotées avec de la viande d\'agneau. Cette sauce épaisse et savoureuse est généralement servie avec du riz ou du pain.'
     },
@@ -480,7 +480,7 @@ const recipes = [
         { name: 'Sel', quantity: 10 },
         { name: 'Poivre', quantity: 5 }
       ],
-      origins: 'Tunisie',
+      origins: ['Tunisie'],
       servings: 6,
       description: 'Le Tajine El Bey est un gratin tunisien à base de viande hachée, de pommes de terre et d\'œufs. Ce plat riche est parfumé avec des épices et garni de fromage râpé pour créer une croûte dorée délicieuse.'
     },
@@ -500,7 +500,7 @@ const recipes = [
       { name: "Harissa", quantity: 2 },
       { name: "Câpres", quantity: 50 }
     ],
-    origins: "Tunisie",
+    origins: ['Tunisie'],
     servings: 8,
     description: "La fricassée tunisienne est un sandwich populaire composé d'un petit pain frit garni de thon, d'œufs durs, de pommes de terre, d'olives et d'harissa. C'est un en-cas très apprécié dans toute la Tunisie, notamment comme street food."
   },
@@ -515,7 +515,7 @@ const recipes = [
       { name: "Huile", quantity: 4 },
       { name: "Margarine", quantity: 200 }
     ],
-    origins: "Tunisie",
+    origins: ['Tunisie'],
     servings: 6,
     description: "Le mlawi est une sorte de crêpe feuilletée tunisienne qui ressemble au msemen marocain. Ces galettes sont préparées avec de la pâte très fine étalée puis pliée plusieurs fois avant d'être cuite sur une plaque chaude. Elles sont généralement servies au petit-déjeuner ou pour accompagner des plats en sauce."
   },
@@ -532,7 +532,7 @@ const recipes = [
       { name: "Miel", quantity: 200 },
       { name: "Pistaches concassées", quantity: 100 }
     ],
-    origins: "Tunisie",
+    origins: ['Tunisie'],
     servings: 20,
     description: "La baklawa tunisienne est un dessert traditionnel composé de fines couches de pâte filo beurrées, farcies d'amandes moulues et nappées de sirop sucré. La version tunisienne se distingue souvent par l'utilisation d'eau de fleur d'oranger et une forme différente de la version turque ou libanaise."
   },
@@ -549,7 +549,7 @@ const recipes = [
       { name: "Eau de rose", quantity: 2 },
       { name: "Colorant alimentaire", quantity: 1 }
     ],
-    origins: "Tunisie",
+    origins: ['Tunisie'],
     servings: 15,
     description: "La zlabia est un dessert traditionnel tunisien très populaire pendant le mois de Ramadan. Il s'agit de beignets spiralés frits puis trempés dans un sirop sucré parfumé à l'eau de rose. Ils sont reconnaissables à leur forme et leur couleur vive, souvent orange ou rouge."
   },
@@ -567,7 +567,7 @@ const recipes = [
       { name: "Sucre glace", quantity: 100 },
       { name: "Eau de fleur d'oranger", quantity: 2 }
     ],
-    origins: "Tunisie",
+    origins: ['Tunisie'],
     servings: 12,
     description: "Le kâak warka est une pâtisserie tunisienne en forme d'anneau, garnie d'une délicieuse farce aux amandes parfumée à l'eau de fleur d'oranger. Ce gâteau est traditionnellement servi lors des fêtes et des cérémonies, notamment les mariages."
   },
@@ -584,7 +584,7 @@ const recipes = [
       { name: "Eau de fleur d'oranger", quantity: 3 },
       { name: "Sucre glace", quantity: 100 }
     ],
-    origins: "Tunisie",
+    origins: ['Tunisie'],
     servings: 15,
     description: "La zouza est une pâtisserie tunisienne délicate composée de deux biscuits en forme de demi-lunes collés ensemble avec une garniture aux amandes. Ces petits gâteaux sont généralement recouverts de sucre glace et sont très populaires lors des fêtes de l'Aïd."
   },
@@ -602,7 +602,7 @@ const recipes = [
       { name: "Vanille", quantity: 1 },
       { name: "Sucre glace", quantity: 100 }
     ],
-    origins: "Tunisie",
+    origins: ['Tunisie'],
     servings: 20,
     description: "Les mkharek sont des biscuits tunisiens torsadés ou en forme de 8, très appréciés pour leur texture friable et leur goût délicat. Ils sont souvent saupoudrés de sucre glace et servis avec du thé à la menthe lors des occasions spéciales et des réunions familiales."
   }
