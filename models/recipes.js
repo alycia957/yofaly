@@ -31,6 +31,10 @@ const recipeSchema = new mongoose.Schema({
             required: true
         }
     }],
+    preparationSteps: [{
+        type: String,
+        required: true
+    }],
     origins: {
         type: [String],
         enum: ['Algérie', 'Tunisie', 'Maroc'],

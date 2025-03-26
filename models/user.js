@@ -19,8 +19,7 @@ const userSchema = new mongoose.Schema({
     },
     profile: {
         firstName: String,
-        lastName: String,
-        avatar: String
+        lastName: String
     }
 }, { timestamps: true });
 

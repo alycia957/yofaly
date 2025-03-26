@@ -166,7 +166,7 @@ const updateUserProfile = async (req, res) => {
             user.email = req.body.email;
         }
 
-        // Mettre à jour le mot de passe si fourni
+        // Mettre à jour le mot de passe 
         if (req.body.password) {
             const salt = await bcrypt.genSalt(10);
             user.password = await bcrypt.hash(req.body.password, salt);
