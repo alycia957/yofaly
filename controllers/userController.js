@@ -15,7 +15,7 @@ const generateToken = (id) => {
 // Enregistrer un nouvel utilisateur
 const registerUser = async (req, res) => {
     try {
-        const { username, email, password, firstName, lastName } = req.body;
+        const { username, email, password } = req.body;
 
         // Vérification des champs obligatoires
         if (!username || !email || !password) {
@@ -43,11 +43,7 @@ const registerUser = async (req, res) => {
         const user = await User.create({
             username,
             email,
-            password: hashedPassword,
-            profile: {
-                firstName,
-                lastName
-            }
+            password: hashedPassword
         });
 
         // Générer un token simple
@@ -146,9 +142,7 @@ const updateUserProfile = async (req, res) => {
             });
         }
 
-        // Mettre à jour les champs du profil
-        user.profile.firstName = req.body.firstName || user.profile.firstName;
-        user.profile.lastName = req.body.lastName || user.profile.lastName;
+    
         
         // Mettre à jour l'email si fourni
         if (req.body.email) {
@@ -178,8 +172,7 @@ const updateUserProfile = async (req, res) => {
         res.json({
             _id: updatedUser._id,
             username: updatedUser.username,
-            email: updatedUser.email,
-            profile: updatedUser.profile
+            email: updatedUser.email
         });
     } catch (error) {
         res.status(500).json({ 

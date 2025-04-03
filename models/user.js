@@ -17,10 +17,7 @@ const userSchema = new mongoose.Schema({
         type: String,
         required: true
     },
-    profile: {
-        firstName: String,
-        lastName: String
-    },
+    
     favoriteRecipes: [{
         type: mongoose.Schema.Types.ObjectId,
         ref: 'Recipe'
