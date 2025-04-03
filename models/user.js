@@ -20,7 +20,11 @@ const userSchema = new mongoose.Schema({
     profile: {
         firstName: String,
         lastName: String
-    }
+    },
+    favoriteRecipes: [{
+        type: mongoose.Schema.Types.ObjectId,
+        ref: 'Recipe'
+    }]
 }, { timestamps: true });
 
 module.exports = mongoose.model('User', userSchema);

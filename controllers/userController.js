@@ -1,7 +1,8 @@
 const User = require('../models/user.js');
+const Recipe = require('../models/recipes.js');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-
+const asyncHandler = require('express-async-handler');
 // Fonction pour générer un token simple (sans JWT)
 const generateToken = (id) => {
     if (!process.env.JWT_SECRET) {
@@ -187,9 +188,64 @@ const updateUserProfile = async (req, res) => {
         });
     }
 };
+const addFavorite = asyncHandler(async (req, res) => {
+    const { id: recipeId } = req.params;
 
+    // Vérifier si la recette existe
+    const recipe = await Recipe.findById(recipeId);
+    if (!recipe) {
+        res.status(404);
+        throw new Error('Recette non trouvée');
+    }
+
+    // Vérifier si déjà dans les favoris
+    const isAlreadyFavorite = req.user.favoriteRecipes.some(
+        favId => favId.toString() === recipeId
+    );
+    
+    if (isAlreadyFavorite) {
+        res.status(400);
+        throw new Error('Cette recette est déjà dans vos favoris');
+    }
+
+    // Ajouter aux favoris
+    req.user.favoriteRecipes.push(recipe._id);
+    await req.user.save();
+
+    res.status(201).json({
+        message: 'Recette ajoutée aux favoris',
+        favoriteRecipes: req.user.favoriteRecipes
+    });
+});
+
+const removeFavorite = asyncHandler(async (req, res) => {
+    const { id: recipeId } = req.params;
+
+    // Supprimer la recette des favoris
+    req.user.favoriteRecipes = req.user.favoriteRecipes.filter(
+        favorite => favorite.toString() !== recipeId
+    );
+
+    await req.user.save();
+
+    res.status(200).json({
+        message: 'Recette retirée des favoris',
+        favoriteRecipes: req.user.favoriteRecipes
+    });
+});
+
+const getFavorites = asyncHandler(async (req, res) => {
+    // Populate pour obtenir les détails complets des recettes
+    const userWithFavorites = await User.findById(req.user.id)
+        .populate('favoriteRecipes');
+
+    res.status(200).json(userWithFavorites.favoriteRecipes);
+});
 
 exports.registerUser = registerUser;
 exports.loginUser = loginUser;
 exports.getUserProfile = getUserProfile;
 exports.updateUserProfile = updateUserProfile;
+exports.addFavorite = addFavorite;
+exports.removeFavorite = removeFavorite;
+exports.getFavorites = getFavorites;

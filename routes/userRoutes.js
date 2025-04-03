@@ -2,22 +2,28 @@ const express = require('express');
 const User = require('../models/user.js');
 const userController = require('../controllers/userController.js');
 const router = express.Router();
-
-router.post('/register', userController.registerUser);
-router.post('/login', userController.loginUser);
-router.get('/profile/:id', userController.getUserProfile); // Temporaire sans auth
-router.put('/profile/:id', userController.updateUserProfile);
 const { 
     registerUser, 
     loginUser, 
     getUserProfile, 
-    updateUserProfile 
-} = require('../controllers/userController.js');
-const { protect } = require('../middleware/AuthentificationHandler.js');
+    updateUserProfile,
+    addFavorite,
+    removeFavorite,
+    getFavorites
+} = require('../controllers/userController');
+const { protect } = require('../middleware/AuthentificationHandler');
 
+// Routes d'authentification (non protégées)
 router.post('/register', registerUser);
 router.post('/login', loginUser);
-router.get('/profile', protect, getUserProfile);
-router.put('/profile', protect, updateUserProfile);
+
+// Routes de profil (protégées)
+router.get('/profile/:id', protect, getUserProfile);
+router.put('/profile/:id', protect, updateUserProfile);
+
+// Routes des favoris (protégées)
+router.post('/favorites/:id', protect, addFavorite);
+router.delete('/favorites/:id', protect, removeFavorite);
+router.get('/favorites', protect, getFavorites);
 
 module.exports = router;

@@ -7,7 +7,6 @@ const mongoURI = 'mongodb+srv://alycia:Mama270682.@cluster0.18x60.mongodb.net/No
 const recipes = [
     // recettes algerienne 
     {
-      id: 1,
       title: 'Couscous Algérien',
       preptime: 120,
       ingredients: [
@@ -41,7 +40,6 @@ const recipes = [
       description: 'Le couscous algérien traditionnel est préparé avec de la semoule de blé dur, des légumes de saison et de la viande d\'agneau. La semoule est cuite à la vapeur dans un couscoussier, tandis que les légumes mijotent dans un bouillon épicé avec la viande pour créer un plat savoureux et nourrissant.'
     },
     {
-      id: 2,
       title: 'Berkoukes',
       preptime: 90,
       ingredients: [
@@ -75,7 +73,6 @@ const recipes = [
       description: 'Le Berkoukes est un plat traditionnel algérien à base de grosses pâtes en forme de grains et d\'un ragoût de légumes et de viande. Les pâtes sont cuites dans le bouillon pour absorber toutes les saveurs des épices et des légumes.'
     },
     {
-      id: 3,
       title: 'Lham Lahlou',
       preptime: 60,
       ingredients: [
@@ -106,7 +103,6 @@ const recipes = [
       description: 'L\'ham Lahlou est un plat sucré-salé traditionnel algérien, composé de viande d\'agneau cuite avec des fruits secs et des épices douces. Ce mélange de sucré et de salé est particulièrement apprécié pendant le Ramadan.'
     },
     {
-      id: 4,
       title: 'Mtewem',
       preptime: 70,
       ingredients: [
@@ -137,7 +133,6 @@ const recipes = [
       description: 'Le Mtewem est un plat algérien à base de poulet mijoté dans une sauce à l\'ail. Le poulet est d\'abord doré puis cuit lentement avec des épices, de l\'ail écrasé et des olives pour créer un plat savoureux et parfumé.'
     },
     {
-      id: 5,
       title: 'Tajine Zitoun',
       preptime: 80,
       ingredients: [
@@ -169,7 +164,6 @@ const recipes = [
       description: 'Le Tajine Zitoun est un plat algérien composé de viande mijotée avec des olives et du citron confit. La cuisson lente permet aux saveurs de se mélanger parfaitement, créant un plat riche et savoureux.'
     },
     {
-      id: 6,
       title: 'Rechta',
       preptime: 90,
       ingredients: [
@@ -202,7 +196,6 @@ const recipes = [
     },
     // Algerian Desserts
     {
-      id: 7,
       title: 'Kalb El Louz',
       preptime: 60,
       ingredients: [
@@ -231,7 +224,6 @@ const recipes = [
       description: 'Kalb El Louz (cœur d\'amande) est un dessert algérien à base de semoule et d\'amandes, imbibé d\'un sirop parfumé à l\'eau de fleur d\'oranger. Ce gâteau moelleux et fondant est souvent servi pendant le Ramadan.'
     },
     {
-      id: 8,
       title: 'Mhalbi',
       image: '/images/mhalbi.jpg',
       preptime: 40,
@@ -261,7 +253,6 @@ const recipes = [
       description: 'Le Mhalbi est un dessert crémeux algérien à base de lait et de maïzena, parfumé à l\'eau de fleur d\'oranger et saupoudré de cannelle. Sa texture douce et son goût léger en font un dessert rafraîchissant parfait après un repas.'
     },
     {
-      id: 9,
       title: 'Makrout aux Amandes',
       image: '/images/makrout-amandes.jpg',
       preptime: 90,
@@ -289,7 +280,6 @@ const recipes = [
       description: 'Le Makrout aux amandes est un gâteau traditionnel algérien à base de semoule et farci d\'une pâte d\'amandes sucrée. Ces petits losanges sont frits puis trempés dans du miel parfumé, créant un délicieux contraste de textures.'
     },
     {
-      id: 10,
       title: 'Baklawa Algérienne',
       image: '/images/baklawa-algerienne.jpg',
       preptime: 120,
@@ -321,7 +311,6 @@ const recipes = [
       description: 'La Baklawa algérienne est un dessert feuilleté à base de pâte filo et d\'amandes, imbibé de sirop parfumé. Ces petites pâtisseries en forme de losanges sont riches et sucrées, idéales pour accompagner un thé à la menthe.'
     },
     {
-      id: 11,
       title: 'Tamina',
       image: '/images/tamina.jpg',
       preptime: 30,
@@ -347,7 +336,6 @@ const recipes = [
       description: 'La Tamina est un dessert algérien simple à base de semoule grillée mélangée avec du beurre et du miel. Parfumée à la cannelle et décorée d\'amandes, cette pâte sucrée est traditionnellement servie lors des célébrations familiales.'
     },
     {
-      id: 12,
       title: 'Dziriyette',
       image: '/images/dziriyette.jpg',
       preptime: 90,
@@ -375,7 +363,6 @@ const recipes = [
   
     // Moroccan Dishes
     {
-      id: 13,
       title: 'Pastilla au Poulet',
       image: '/images/pastilla-poulet.jpg',
       preptime: 120,
@@ -414,7 +401,6 @@ const recipes = [
       description: 'La pastilla au poulet est un plat marocain festif, mêlant le sucré et le salé. Cette tourte feuilletée contient du poulet émincé, des œufs, des amandes et des épices, le tout saupoudré de sucre glace et de cannelle.'
     },
     {
-      id: 14,
       title: 'Tajine de Poulet',
       image: '/images/tajine-poulet.jpg',
       preptime: 90,
@@ -448,7 +434,6 @@ const recipes = [
       description: 'Le tajine de poulet marocain est un plat mijoté lentement dans un plat en terre cuite traditionnel. Le poulet est tendre et parfumé par les épices, les olives et le citron confit, créant un mélange savoureux de saveurs.'
     },
     {
-      id: 15,
       title: 'Tajine Viande et Pommes de Terre',
       image: '/images/tajine-viande-pdt.jpg',
       preptime: 100,
@@ -484,7 +469,6 @@ const recipes = [
       description: 'Ce tajine marocain combine la tendreté de la viande de bœuf avec des pommes de terre fondantes, le tout mijoté dans une sauce richement épicée. Ce plat réconfortant est parfait pour un repas familial.'
     },
     {
-      id: 16,
       title: 'Couscous Marocain',
       preptime: 120,
       ingredients: [
@@ -525,7 +509,6 @@ const recipes = [
     },
     // recettes marocaines 
     {
-      id: 17,
       title: 'Kaab El Ghzal',
       preptime: 90,
       ingredients: [
@@ -550,7 +533,6 @@ const recipes = [
       description: 'Kaab El Ghzal, aussi appelé "cornes de gazelle", est un célèbre gâteau marocain en forme de croissant fourré d\'une délicieuse pâte d\'amandes parfumée. La pâtisserie est légèrement dorée puis saupoudrée de sucre glace.'
     },
     {
-      id: 18,
       title: 'Fekkas',
       preptime: 120,
       ingredients: [
@@ -577,7 +559,6 @@ const recipes = [
       description: 'Les Fekkas sont des biscuits marocains croquants similaires aux biscottis italiens. Préparés avec des amandes entières et parfois des raisins secs, ils sont cuits deux fois pour obtenir ce croquant caractéristique, parfait pour accompagner le thé.'
     },
     {
-      id: 19,
       title: 'Chebakia',
       preptime: 150,
       ingredients: [
@@ -606,7 +587,6 @@ const recipes = [
       description: 'La Chebakia est une pâtisserie marocaine traditionnelle, en forme de fleur, frite et trempée dans du miel parfumé à l\'eau de fleur d\'oranger. Ces gâteaux sont particulièrement populaires pendant le Ramadan.'
     },
     {
-      id: 20,
       title: 'Ghraiba à la Semoule et Noix de Coco',
       image: '/images/ghraiba-coco.jpg',
       preptime: 60,
@@ -636,7 +616,6 @@ const recipes = [
   
     // recette tunisienne 
     {
-      id: 21,
       title: 'Couscous au Poisson',
       image: '/images/couscous-poisson.jpg',
       preptime: 90,
@@ -674,7 +653,6 @@ const recipes = [
       description: 'Le couscous au poisson est une spécialité tunisienne provenant des régions côtières. La semoule est servie avec un bouillon épicé à la harissa, des légumes et du poisson frais. Ce plat léger et parfumé est particulièrement apprécié en été.'
     },
     {
-      id: 22,
       title: 'Mloukhiya',
       image: '/images/mloukhiya.jpg',
       preptime: 120,

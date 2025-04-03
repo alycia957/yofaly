@@ -1,14 +1,6 @@
 const mongoose = require('mongoose');
 
 const recipeSchema = new mongoose.Schema({
-    id: {
-        type: Number,
-        unique: true,
-        default: function(){
-            //generer autaumatiquement un ID unique 
-            return Date.now();
-        }
-    },
     title: {
         type: String,
         required: true
