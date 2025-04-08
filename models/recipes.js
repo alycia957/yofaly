@@ -44,6 +44,11 @@ const recipeSchema = new mongoose.Schema({
     description: {
         type: String,
         required: true
+    },
+    recipetype: {
+        type: [String],
+        enum: ['plat', 'dessert'],
+        required: true
     }
 }, 
 { timestamps: true });
