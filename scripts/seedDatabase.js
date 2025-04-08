@@ -9,7 +9,7 @@ const recipes = [
     {
       id:1,
       title: 'Couscous Algérien',
-      image: "assets/images/Cousous_algerien.jpg",
+      image: "assets/images/Couscous_algerien.jpg",
       preptime: 120,
       ingredients: [
         { name: 'Semoule', quantity: 500 },
@@ -143,7 +143,7 @@ const recipes = [
     {
       id:5,
       title: 'Tajine Zitoun',
-      image: "assets/images/tajinzitoun.jpg",
+      image: "assets/images/tajine_zitoun.jpg",
       preptime: 80,
       ingredients: [
         { name: 'Viande d\'agneau', quantity: 600 },
@@ -210,7 +210,7 @@ const recipes = [
     {
       id:7,
       title: 'Kalb El Louz',
-      image: "assets/images/kalbellouz.jpg",
+      image: "assets/images/kalb_ellouz.jpg",
       preptime: 60,
       ingredients: [
         { name: 'Semoule fine', quantity: 500 },
@@ -298,7 +298,7 @@ const recipes = [
     {
       id:10,
       title: 'Baklawa Algérienne',
-      image: "assets/images/baklawaalg.jpg",
+      image: "assets/images/baklawa_alg.jpg",
       preptime: 120,
       ingredients: [
         { name: 'Pâte filo', quantity: 500 },
@@ -423,7 +423,7 @@ const recipes = [
     {
       id:14,
       title: 'Tajine de Poulet',
-      image: "assets/images/tajinepoulet.jpg",
+      image: "assets/images/tajine_poulet.jpg",
       preptime: 90,
       ingredients: [
         { name: 'Poulet', quantity: 800 },
@@ -457,7 +457,7 @@ const recipes = [
     {
       id:15,
       title: 'Tajine Viande et Pommes de Terre',
-      image: "assets/images/tajinepommedeterre.jpg",
+      image: "assets/images/tajine_pommedeterre.jpg",
       preptime: 100,
       ingredients: [
         { name: 'Viande de bœuf', quantity: 700 },
@@ -493,7 +493,7 @@ const recipes = [
     {
       id:16,
       title: 'Couscous Marocain',
-      image: "assets/images/couscousmar.jpg",
+      image: "assets/images/couscous_mar.jpg",
       preptime: 120,
       ingredients: [
         { name: 'Semoule de couscous', quantity: 500 },
@@ -535,7 +535,7 @@ const recipes = [
     {
       id:17,
       title: 'Kaab El Ghzal',
-      image: "assets/images/kaabelghzal.jpg",
+      image: "assets/images/kaab_elghzal.jpg",
       preptime: 90,
       ingredients: [
         { name: 'Farine', quantity: 500 },
@@ -649,7 +649,7 @@ const recipes = [
     {
       id:21,
       title: 'Couscous au Poisson',
-      image: "assets/images/couscousaupoisson.jpg",
+      image: "assets/images/couscous_aupoisson.jpg",
       preptime: 90,
       ingredients: [
         { name: 'Semoule de couscous', quantity: 500 },
